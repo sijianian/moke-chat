@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: 微软雅黑;
+}
+
+body {
+    height: 100%;
+    font-size: 1.4rem;
+}
+
+/*清除浮动*/
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    padding:1rem 0;
+    background: linear-gradient(#00c6ff,#009cff); /* 标准的语法 */
+    z-index: 999;
+}
+
+.header h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+#status{
+    position: absolute;
+    bottom:-2rem;
+    font-size: 2rem;
+    width: 50%;
+    margin: 0 auto;
+}
+.content {
+    width: 50%;
+    height: auto;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.bgPic {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1000px;
+    width: 100%;
+    /*background: url("../images/bgPic1.jpg") fixed center no-repeat;*/
+    background-size: auto;
+}
+
+.bgPic:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+#historyMsg {
+    padding: 6rem 0rem 10.5rem 0rem;
+    font-size: 2rem;
+    overflow: auto;
+}
+
+#historyMsg img {
+    max-width: 30rem;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    padding: 1rem 0;
+    margin: 0 auto;
+    border-top:1px solid #666666;
+    background: #ececec;
+    opacity: 0.7;
+    z-index: 999;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+
+.btn-left {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    width: 10%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    border: 0;
+}
+
+.btn-more {
+    width: 4rem;
+    height: 4rem;
+    margin-left:0.5rem;
+    vertical-align: 50%;
+    background: url("../images/icon/more.png") no-repeat center center;
+    background-size: 125%;
+    border: none;
+    border-radius: 4rem;
+}
+
+.input-message {
+    display: table-cell;
+    vertical-align: -2px;
+    float: left;
+    width: 74%;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    text-indent: 1rem;
+    border: 0;
+    border-radius: 0.5rem 0.5rem;
+    resize: none; /*禁止textarea放大缩小*/
+    overflow-y: hidden;
+}
+
+.btn-right {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    width:16%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    border: 0;
+}
+.btn-emoji {
+    width: 4rem;
+    height: 4rem;
+    margin-left:0.5rem;
+    vertical-align: 50%;
+    background: url("../images/icon/emoji.png") no-repeat center center;
+    background-size: 125%;
+    border: none;
+    border-radius: 4rem;
+}
+
+.btn-send {
+    width: 4rem;
+    height: 4rem;
+    margin-left:0.1rem;
+    vertical-align: 50%;
+    background: url("../images/icon/send.png") no-repeat center center;
+    background-size: 125%;
+    border: none;
+    border-radius: 4rem;
+}
+
+#loginWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding-top: 20rem;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    background-color: rgba(5, 5, 5, .6);
+    z-index: 9999;
+}
+
+#nickWrapper {
+    display: none;
+}
+
+#nickWrapper input[type=text] {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.timespan {
+    color: #cccccc;
+}
+
+.items {
+    display: none;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+.btn-image{
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin-left:1rem;
+    vertical-align: 50%;
+    background: url("../images/icon/image.png") no-repeat center 65%;
+    background-size: 125%;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+.btn-image:active{
+    position: relative;
+    top:1px;
+}
+.btn-clear{
+    float:left;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin-left:1rem;
+    vertical-align: 50%;
+    background: url("../images/icon/clear.png") no-repeat center center;
+    background-size: 125%;
+    border: none;
+    border-radius: 4rem;
+    z-index: 1000;
+}
+.btn-clear:active{
+    position: relative;
+    top:1px;
+}
+#colorStyle {
+    float:left;
+    display: inline-block;
+    vertical-align: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-left:0.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+#colorStyle:active{
+    position: relative;
+    top:1px;
+}
+
+#sendImage {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    font-size:0;
+}
+#sendImage:hover {
+    cursor: pointer;
+}
+
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    position: absolute;
+    top: -22rem;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
+
+#emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+
+#emojiWrapper img:hover {
+    background-color: blue;
+}
+
+.emoji {
+    display: inline;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 0.5rem;
+    left: -0.6rem;
+    width: 0px;
+    height: 0px;
+    border-bottom: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.7rem solid #ADADAD;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 0.5rem;
+    right: -0.6rem;
+    width: 0px;
+    height: 0px;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.7rem solid #00c6ff;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+.msg-span-right {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    max-width: 30rem;
+    margin: 0 0.7rem;
+    padding: 0.5rem;
+    vertical-align: text-top;
+    background: #00c6ff;
+    border-radius: 0.6rem;
+}
+
+.msg-span-left {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    max-width: 30rem;
+    margin: 0 0.7rem;
+    padding: 0.5rem;
+    vertical-align: text-top;
+    background: #ADADAD;
+    border-radius: 0.6rem;
+}
+#loginBtn{
+    width:3rem;
+    height: 2.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+@media screen and (max-width: 321px) {
+    html {
+        font-size: 30.5%;
+    }
+
+    #historyMsg {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 376px)and (min-width: 321px) {
+    html {
+        font-size: 36.5%;
+    }
+    .header{
+        padding:1.5rem 0;
+    }
+    .header h1{
+        font-size:4rem;
+    }
+    #historyMsg {
+        font-size: 3rem;
+        padding-top:8rem;
+    }
+    .btn-left{
+        width:10%;
+    }
+    .input-message{
+        width:70%;
+    }
+    .btn-right{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 414px) and (min-width: 376px) {
+    html {
+        font-size: 38.5%;
+    }
+    .header{
+        padding:1.5rem 0;
+    }
+    .header h1{
+        font-size:4rem;
+    }
+    #historyMsg {
+        font-size: 3rem;
+        padding-top:8rem;
+    }
+    .btn-left{
+        width:10%;
+    }
+    .input-message{
+        width:70%;
+    }
+    .btn-right{
+        width:20%;
+    }
+}
+
+@media screen and (max-width: 580px) and (min-width: 414px) {
+    html {
+        font-size: 42.5%;
+    }
+    .header{
+        padding:1.5rem 0;
+    }
+    .header h1{
+        font-size:4rem;
+    }
+    #historyMsg {
+        font-size: 3rem;
+        padding-top:8rem;
+    }
+    .btn-left{
+        width:10%;
+    }
+    .input-message{
+        width:70%;
+    }
+    .btn-right{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 320px) {
+    .header, .content, .footer {
+        width: 100%;
+    }
+}

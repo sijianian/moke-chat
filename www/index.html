@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no,initial-scale=1">
+    <title>mokeChat</title>
+    <link rel="shortcut icon" href="images/logo.ico"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="header">
+    <h1>moke</h1>
+    <span id="status"></span>
+</div>
+<div class="content">
+    <div id="historyMsg"></div>
+</div>
+<div class="footer clearfix">
+    <div class="items clearfix">
+        <input id="colorStyle" type="color" placeHolder='#000' title="font color"/>
+        <span class="btn-image">
+             <input id="sendImage" type="file"/>
+        </span>
+        <input id="clearBtn" class="btn-clear" type="button"/>
+    </div>
+    <span class="btn-left"><button id="btnMore" class="btn-more"></button></span>
+    <textarea id="inputMessage" class="input-message"></textarea>
+    <span class="btn-right"><button id="emoji" class="btn-emoji"></button><button id="btnSend" class="btn-send"></button></span>
+    <div id="emojiWrapper">
+    </div>
+</div>
+<div id="loginWrapper" class="login-wrapper">
+    <p id="info">正在连接到服务器...</p>
+    <div id="nickWrapper">
+        <input type="text" placeHolder="nickname" id="nicknameInput"/>
+        <input type="button" value="OK" id="loginBtn"/>
+    </div>
+</div>
+<div class="bgPic"></div>
+<script src="js/jquery-1.4.2.min.js"></script>
+<script src="../socket.io/socket.io.js"></script>
+<script src="js/mokeChat.js"></script>
+</body>
+</html>
