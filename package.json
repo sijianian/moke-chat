@@ -1,5 +1,6 @@
 {
     "name": "mokeChat",
+    "license": "gg",
     "description": "a realtime chat web application",
     "version": "0.4.0",
     "main": "server.js",
@@ -10,5 +11,8 @@
     "engines": {
         "node": "0.10.x",
         "npm": "1.2.x"
+    },
+    "repository":{
+        "type":"git"
     }
 }
