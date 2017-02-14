@@ -1,10 +1,18 @@
 var express = require('express'),
     app = express(),
+    port = 8080,
     server = require('http').createServer(app),
     io = require('socket.io').listen(server),//引入socket.io模块并绑定到服务器
     users = [];//保存所有在线用户的昵称
+
 app.use('/', express.static(__dirname + '/www'));
-server.listen(8080);
+server.listen(port, function (err) {
+    if (err) {
+        console.log(err)
+    } else {
+        console.info("==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
+    }
+});
 //socket部分
 io.on('connection', function (socket) {
     //昵称设置
@@ -30,7 +38,7 @@ io.on('connection', function (socket) {
         socket.broadcast.emit('newMsg', socket.nickname, msg, color);
     });
     //接收用户发来的图片
-    socket.on('img', function (imgData,color) {
-        socket.broadcast.emit('newImg', socket.nickname, imgData,color);
+    socket.on('img', function (imgData, color) {
+        socket.broadcast.emit('newImg', socket.nickname, imgData, color);
     });
 });

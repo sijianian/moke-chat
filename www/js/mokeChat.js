@@ -41,9 +41,9 @@ MokeChat.prototype = {
         });
         /*输入框获得焦点*/
         $('#inputMessage').focus(function () {
-            document.body.scrollTop =  document.body.scrollHeight;
-            document.documentElement.scrollTop =  document.body.scrollHeight;
-            window.pageYOffset =document.body.scrollHeight;
+            document.body.scrollTop = document.body.scrollHeight;
+            document.documentElement.scrollTop = document.body.scrollHeight;
+            window.pageYOffset = document.body.scrollHeight;
         });
         //系统提示信息
         this.socket.on('system', function (nickName, userCount, type) {

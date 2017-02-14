@@ -6,7 +6,7 @@
           content="width=device-width,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no,initial-scale=1">
     <title>mokeChat</title>
     <link rel="shortcut icon" href="images/logo.ico"/>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
 <div class="header">
@@ -26,7 +26,8 @@
     </div>
     <span class="btn-left"><button id="btnMore" class="btn-more"></button></span>
     <textarea id="inputMessage" class="input-message"></textarea>
-    <span class="btn-right"><button id="emoji" class="btn-emoji"></button><button id="btnSend" class="btn-send"></button></span>
+    <span class="btn-right"><button id="emoji" class="btn-emoji"></button><button id="btnSend"
+                                                                                  class="btn-send"></button></span>
     <div id="emojiWrapper">
     </div>
 </div>
@@ -38,8 +39,7 @@
     </div>
 </div>
 <div class="bgPic"></div>
-<script src="js/jquery-1.4.2.min.js"></script>
-<script src="../socket.io/socket.io.js"></script>
-<script src="js/mokeChat.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="dist/js/all.min.js"></script>
 </body>
 </html>
